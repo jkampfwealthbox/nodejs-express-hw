@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-express-hw",
+  "version": "0.0.1",
+  "main": "server.js",
+  "repository": "https://github.com/htutman/nodejs-express-hw.git",
+  "author": "Hrvoje Tutman",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "4.16.3"
+  }
+}

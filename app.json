@@ -1,0 +1,5 @@
+{
+  "name": "nodejs-express-hw",
+  "description": "Simple Express Hello World Node.js application prepared for Heroku deployment.",
+  "addons": []
+}
