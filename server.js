@@ -9,13 +9,17 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// /hello route: returns headers
+const appName = process.env.HEROKU_APP_NAME || 'unknown-app';
+
 app.get('/hello', (req, res) => {
+  const output = {
+    app: appName,
+    headers: req.headers
+  };
   res.set('Content-Type', 'application/json');
-  res.send(JSON.stringify(req.headers, null, 2));
+  res.send(JSON.stringify(output, null, 2));
 });
 
-// Catch-all: redirect everything else to /hello
 app.use((req, res) => {
   res.redirect('/hello');
 });
@@ -23,5 +27,6 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
 
 
